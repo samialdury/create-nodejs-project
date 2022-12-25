@@ -1,0 +1,40 @@
+{
+	"name": "create-nodejs-project",
+	"description": "",
+	"version": "1.0.0",
+	"author": "Sami Al-Dury",
+	"private": true,
+	"license": "MIT",
+	"homepage": "https://github.com/samialdury/create-nodejs-project#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/samialdury/create-nodejs-project.git"
+	},
+	"bugs": {
+		"url": "https://github.com/samialdury/create-nodejs-project/issues"
+	},
+	"main": "./build/src/main.js",
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"postinstall": "husky install"
+	},
+	"dependencies": {
+		"pino": "8.8.0",
+		"zod": "3.20.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "17.3.0",
+		"@commitlint/config-conventional": "17.3.0",
+		"@types/node": "18.11.17",
+		"@vitest/coverage-c8": "0.26.2",
+		"dotenv": "16.0.3",
+		"husky": "8.0.2",
+		"pino-pretty": "9.1.1",
+		"rome": "11.0.0",
+		"ts-node-dev": "2.0.0",
+		"typescript": "4.9.4",
+		"vitest": "0.26.2"
+	}
+}

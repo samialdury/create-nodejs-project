@@ -1,0 +1,39 @@
+// Source: https://github.com/tsconfig/bases
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"outDir": "./build",
+		"rootDir": ".",
+		"lib": [
+			"es2022"
+		],
+		"module": "commonjs",
+		"target": "ES2022",
+		"moduleResolution": "Node",
+		"types": ["vitest/globals"],
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		// "noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		// "importsNotUsedAsValues": "error",
+		"removeComments": true,
+		"checkJs": true
+	},
+	"include": [
+		"./src",
+		"./test"
+	],
+	"exclude": [
+		"./node_modules"
+	]
+}

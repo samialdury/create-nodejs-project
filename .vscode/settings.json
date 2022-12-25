@@ -1,0 +1,24 @@
+{
+	"eslint.enable": false,
+	"prettier.enable": false,
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.formatOnSave": true,
+	"[typescript]": {
+			"editor.defaultFormatter": "rome.rome"
+	},
+	"[javascript]": {
+			"editor.defaultFormatter": "rome.rome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml",
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/build": true,
+		"**/pnpm-lock.yaml": true,
+	}
+}
