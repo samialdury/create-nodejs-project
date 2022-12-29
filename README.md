@@ -9,7 +9,11 @@ The easiest way to get started is either by [creating a new Github repository fr
 ```sh
 pnpm dlx tiged github:samialdury/create-nodejs-project my-project
 
-cd my-project && git init && pnpm install
+cd my-project
+git init
+pnpm install
+
+make help
 ```
 
 ## Stack
