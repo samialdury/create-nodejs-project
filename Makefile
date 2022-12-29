@@ -1,15 +1,15 @@
 PROJECT_NAME	:= create-nodejs-project
 
-SRC_DIR 			:= ./src
-TEST_DIR 			:= ./test
+SRC_DIR				:= ./src
+TEST_DIR			:= ./test
 
-NPM_BIN 			:= ./node_modules/.bin
+NPM_BIN				:= ./node_modules/.bin
 
-TSC 					:= $(NPM_BIN)/tsc
+TSC						:= $(NPM_BIN)/tsc
 TS_NODE_DEV		:= $(NPM_BIN)/ts-node-dev
 VITEST				:= $(NPM_BIN)/vitest
 ROME					:= $(NPM_BIN)/rome
-PINO_PRETTY   := $(NPM_BIN)/pino-pretty
+PINO_PRETTY		:= $(NPM_BIN)/pino-pretty
 
 .PHONY: help
 # help: show this help
