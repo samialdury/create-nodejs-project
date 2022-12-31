@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { ConfigError } from '../errors'
 
 export const configSchema = z.object({
@@ -8,24 +9,32 @@ export const configSchema = z.object({
 
 export let config: z.infer<typeof configSchema>
 
-export const init = () => {
-	if (config) {
-		return
-	}
-
-	const validationResult = configSchema.safeParse({
-		nodeEnv: process.env.NODE_ENV,
-		logLevel: process.env.LOG_LEVEL,
-	})
+const validateAndClone = <T extends z.ZodObject<z.ZodRawShape>>(
+	schema: T,
+	values: Record<keyof z.infer<typeof schema>, unknown>
+): z.infer<typeof schema> => {
+	const validationResult = schema.safeParse(values)
 
 	if (!validationResult.success) {
 		throw new ConfigError(validationResult.error.issues, 'Invalid config')
 	}
 
-	config = validationResult.data
+	return validationResult.data
 }
 
-export const destroy = () => {
-	// @ts-ignore
+export const init = (): void => {
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	if (config) {
+		return
+	}
+
+	config = validateAndClone(configSchema, {
+		nodeEnv: process.env['NODE_ENV'],
+		logLevel: process.env['LOG_LEVEL'],
+	})
+}
+
+export const destroy = (): void => {
+	// @ts-expect-error For test teardown
 	config = undefined
 }

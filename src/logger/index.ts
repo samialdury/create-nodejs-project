@@ -1,9 +1,11 @@
-import pino, { Logger } from 'pino'
+import pino from 'pino'
+
 import { config } from '../config'
 
-export let logger: Logger
+export let logger: pino.Logger
 
-export const init = ({ name }: { name: string }) => {
+export const init = ({ name }: { name: string }): void => {
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 	if (logger) {
 		return
 	}
@@ -16,7 +18,7 @@ export const init = ({ name }: { name: string }) => {
 	logger.useLevelLabels = true
 }
 
-export const destroy = () => {
-	// @ts-ignore
+export const destroy = (): void => {
+	// @ts-expect-error For test teardown
 	logger = undefined
 }

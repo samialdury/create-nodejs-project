@@ -1,4 +1,5 @@
-import { z } from 'zod'
+import type { z } from 'zod'
+
 import { BaseError } from './base-error'
 
 export class ConfigError extends BaseError {

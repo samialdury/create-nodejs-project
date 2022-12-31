@@ -21,7 +21,8 @@ make help
 - [Node.js](https://github.com/nodejs/node) & [Typescript](https://github.com/microsoft/TypeScript)
 - [pnpm](https://github.com/pnpm/pnpm) package manager
 - [Vitest](https://github.com/vitest-dev/vitest) for testing (coverage via [c8](https://github.com/bcoe/c8))
-- [Rome](https://github.com/rome/tools) formatter & linter
+- [Prettier](https://github.com/prettier/prettier) formatter
+- [ESLint](https://github.com/eslint/eslint) linter
 - [Pino](https://github.com/pinojs/pino) logger
 - [Zod](https://github.com/colinhacks/zod) for schema declaration & validation
 - [Husky](https://github.com/typicode/husky) Git hooks

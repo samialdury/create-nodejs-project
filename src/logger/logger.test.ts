@@ -1,7 +1,12 @@
-import { Logger } from 'pino'
+import type { Logger } from 'pino'
+
 import { logger, init as initLogger, destroy as destroyLogger } from '.'
 
 describe('Logger', () => {
+	beforeEach(() => {
+		expect(logger).toBeUndefined()
+	})
+
 	afterEach(() => {
 		destroyLogger()
 	})

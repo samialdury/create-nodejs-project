@@ -29,7 +29,7 @@ jobs:
         run: make install
 
       - name: Format & Lint
-        run: make lint
+        run: make lint-ci
 
       - name: Run tests
         run: make coverage

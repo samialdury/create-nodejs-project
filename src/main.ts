@@ -1,7 +1,7 @@
 import { init as initConfig } from './config'
 import { init as initLogger, logger } from './logger'
 
-export const main = async () => {
+export const main = (): void => {
 	initConfig()
 
 	initLogger({
