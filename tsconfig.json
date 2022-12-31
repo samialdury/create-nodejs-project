@@ -2,38 +2,36 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"outDir": "./build",
-		"rootDir": ".",
 		"lib": [
 			"es2022"
 		],
 		"module": "commonjs",
 		"target": "ES2022",
-		"moduleResolution": "Node",
-		"types": ["vitest/globals"],
 		"strict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "Node",
 		"allowUnusedLabels": false,
 		"allowUnreachableCode": false,
 		"exactOptionalPropertyTypes": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
-		// "noPropertyAccessFromIndexSignature": true,
+		"noPropertyAccessFromIndexSignature": true,
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		// "importsNotUsedAsValues": "error",
+		"importsNotUsedAsValues": "error",
+		"checkJs": true,
+		// 
 		"removeComments": true,
-		"checkJs": true
+		"rootDir": ".",
+		"outDir": "./build",
+		"types": ["vitest/globals"]
 	},
 	"include": [
 		"./src",
 		"./test"
-	],
-	"exclude": [
-		"./node_modules"
 	]
 }
