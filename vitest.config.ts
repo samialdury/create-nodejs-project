@@ -11,9 +11,12 @@ export default defineConfig({
 		unstubEnvs: true,
 		coverage: {
 			provider: 'c8',
-			all: true,
-			100: true,
 			include: ['src/**/*.ts'],
+			all: true,
+			lines: 80,
+			functions: 80,
+			branches: 80,
+			statements: 80,
 		},
 	},
 })
