@@ -71,12 +71,12 @@ prettier-ci:
 .PHONY: eslint
 # eslint: run ESLint (autofix)
 eslint:
-	$(ESLINT) $(SRC_DIR) $(TEST_DIR) --max-warnings 0 --fix
+	$(ESLINT) --max-warnings 0 --cache --fix $(SRC_DIR) $(TEST_DIR)
 
 .PHONY: eslint-ci
 # eslint-ci: run ESLint
 eslint-ci:
-	$(ESLINT) $(SRC_DIR) $(TEST_DIR) --max-warnings 0
+	$(ESLINT) --max-warnings 0 $(SRC_DIR) $(TEST_DIR)
 
 .PHONY: lint
 # lint: run Prettier & ESlint (autofix)
