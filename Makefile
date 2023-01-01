@@ -11,6 +11,7 @@ VITEST				:= $(NPM_BIN)/vitest
 PRETTIER			:= $(NPM_BIN)/prettier
 ESLINT				:= $(NPM_BIN)/eslint
 PINO_PRETTY		:= $(NPM_BIN)/pino-pretty
+HUSKY					:= $(NPM_BIN)/husky
 
 .PHONY: help
 # help: show this help
@@ -25,7 +26,8 @@ help:
 .PHONY: install
 # install: install all dependencies
 install:
-	pnpm i
+	pnpm install
+	$(HUSKY) install
 
 .PHONY: build
 # build: build TS
