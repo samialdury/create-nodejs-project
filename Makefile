@@ -35,6 +35,11 @@ build:
 	rm -rf ./build
 	$(TSC) --build --force
 
+.PHONY: build-image
+# build-image: build Docker image (`args=`, `tag=`)
+build-image:
+	docker build $(args) -t $(or $(tag), $(PROJECT_NAME)) . -f ./Dockerfile
+
 .PHONY: dev
 # dev: run TS (watch mode)
 dev:
