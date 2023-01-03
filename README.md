@@ -26,6 +26,7 @@ make help
 - [Pino](https://github.com/pinojs/pino) logger
 - [Zod](https://github.com/colinhacks/zod) for schema declaration & validation
 - [Husky](https://github.com/typicode/husky) Git hooks
+- [Docker](https://www.docker.com/) for containerization
 
 ## License
 
