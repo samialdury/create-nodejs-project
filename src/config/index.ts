@@ -16,6 +16,8 @@ const validateAndClone = <T extends z.ZodObject<z.ZodRawShape>>(
 	const validationResult = schema.safeParse(values)
 
 	if (!validationResult.success) {
+		// eslint-disable-next-line no-console
+		console.error(validationResult.error.issues)
 		throw new ConfigError(validationResult.error.issues, 'Invalid config')
 	}
 
