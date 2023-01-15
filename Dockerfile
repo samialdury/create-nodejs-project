@@ -34,4 +34,5 @@ ENV NODE_ENV production
 COPY --from=build-js --chown=nonroot:nonroot build build
 COPY --from=install-prod-deps --chown=nonroot:nonroot node_modules node_modules
 
+USER nonroot:nonroot
 CMD ["./build/src/main.js"]
