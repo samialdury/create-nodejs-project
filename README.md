@@ -1,5 +1,10 @@
 # Create Node.js Project
 
+[![Latest release](https://badgen.net/github/release/samialdury/create-nodejs-project)](https://github.com/samialdury/create-nodejs-project/releases/latest)
+[![Latest tag](https://badgen.net/github/tag/samialdury/create-nodejs-project)](https://github.com/samialdury/create-nodejs-project/tags)
+[![License](https://badgen.net/github/license/samialdury/create-nodejs-project)](LICENSE)
+[![CI status](https://github.com/samialdury/create-nodejs-project/actions/workflows/ci.yaml/badge.svg)](https://github.com/samialdury/create-nodejs-project/actions/workflows/ci.yaml)
+
 This is a template repository for setting up new Node.js project based on my personal preference.
 
 ## Quickstart
