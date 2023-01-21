@@ -1,6 +1,6 @@
 {
 	"name": "create-nodejs-project",
-	"description": "",
+	"description": "Template repository for setting up new Node.js project",
 	"version": "1.0.0",
 	"author": "Sami Al-Dury",
 	"private": true,
