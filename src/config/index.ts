@@ -25,12 +25,7 @@ const validateAndClone = <T extends z.ZodObject<z.ZodRawShape>>(
 }
 
 export const init = (): void => {
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-	if (config) {
-		return
-	}
-
-	config = validateAndClone(configSchema, {
+	config ??= validateAndClone(configSchema, {
 		nodeEnv: process.env['NODE_ENV'],
 		logLevel: process.env['LOG_LEVEL'],
 	})
