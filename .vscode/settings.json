@@ -1,7 +1,11 @@
 {
 	"search.exclude": {
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/.pnpm-store": true,
 		"**/node_modules": true,
 		"**/build": true,
+		"**/coverage": true,
 		"**/pnpm-lock.yaml": true,
 		"**/.eslintcache": true,
 	}
