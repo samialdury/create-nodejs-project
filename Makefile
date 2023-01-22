@@ -1,3 +1,5 @@
+include .env
+
 PROJECT_NAME	:= create-nodejs-project
 
 SRC_DIR				:= ./src
@@ -27,7 +29,7 @@ install: ## install all dependencies
 
 .PHONY: dev
 dev: ## run TS (watch mode)
-	$(TS_NODE_DEV) -r dotenv/config --transpile-only --respawn --exit-child ./src/main.ts | $(PINO_PRETTY)
+	$(TS_NODE_DEV) -r dotenv/config --transpile-only --respawn ./src/main.ts | $(PINO_PRETTY)
 
 .PHONY: run-js
 run-js: ## run built JS
