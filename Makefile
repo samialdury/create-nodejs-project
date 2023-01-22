@@ -31,7 +31,7 @@ dev: ## run TS (watch mode)
 
 .PHONY: run-js
 run-js: ## run built JS
-	node ./build/src/main.js
+	node -r dotenv/config ./build/src/main.js
 
 ##@ Build
 
