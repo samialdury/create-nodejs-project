@@ -1,5 +1,5 @@
 export class BaseError extends Error {
-	public isOperational: boolean
+	isOperational: boolean
 
 	constructor(message: string, isOperational: boolean) {
 		super(message)
