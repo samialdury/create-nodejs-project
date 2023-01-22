@@ -43,7 +43,7 @@ build: ## build TS
 	$(TSC) --build --force
 
 .PHONY: build-image
-build-image: ## build Docker image (`args=`, `tag=`)
+build-image: ## build Docker image (args=<build args>, tag=<string>)
 	docker build $(args) -t $(or $(tag), $(PROJECT_NAME)) . -f ./Dockerfile
 
 ##@ Test
