@@ -1,6 +1,6 @@
 import type { Logger } from 'pino'
 
-import { logger, init as initLogger, destroy as destroyLogger } from '.'
+import { logger, initLogger, destroyLogger } from '.'
 
 describe('Logger', () => {
 	beforeEach(() => {

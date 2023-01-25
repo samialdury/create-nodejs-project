@@ -4,7 +4,7 @@ import { config } from '../config'
 
 export let logger: pino.Logger
 
-export const init = ({ name }: { name: string }): void => {
+export const initLogger = ({ name }: { name: string }): void => {
 	logger ??= pino({
 		name,
 		level: config.logLevel,
@@ -15,7 +15,7 @@ export const init = ({ name }: { name: string }): void => {
 	logger.debug('Logger initialized')
 }
 
-export const destroy = (): void => {
+export const destroyLogger = (): void => {
 	logger.debug('Logger instance destroyed')
 
 	// @ts-expect-error For test teardown

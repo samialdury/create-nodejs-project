@@ -1,6 +1,6 @@
 import { ConfigError } from '../errors'
 
-import { config, init as initConfig, destroy as destroyConfig } from '.'
+import { config, initConfig, destroyConfig } from '.'
 
 describe('Config', () => {
 	beforeEach(() => {

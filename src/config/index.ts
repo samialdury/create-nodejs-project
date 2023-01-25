@@ -24,14 +24,14 @@ const validateAndClone = <T extends z.ZodObject<z.ZodRawShape>>(
 	return validationResult.data
 }
 
-export const init = (): void => {
+export const initConfig = (): void => {
 	config ??= validateAndClone(configSchema, {
 		nodeEnv: process.env['NODE_ENV'],
 		logLevel: process.env['LOG_LEVEL'],
 	})
 }
 
-export const destroy = (): void => {
+export const destroyConfig = (): void => {
 	// @ts-expect-error For test teardown
 	config = undefined
 }
