@@ -1,25 +1,23 @@
 import type { Logger } from 'pino'
 
+import { config, destroyConfig, initConfig } from '../config'
+
 import { logger, initLogger, destroyLogger } from '.'
 
 describe('Logger', () => {
 	beforeEach(() => {
+		expect(config).toBeUndefined()
 		expect(logger).toBeUndefined()
+
+		initConfig()
 	})
 
 	afterEach(() => {
+		destroyConfig()
 		destroyLogger()
 	})
 
 	it('Should initialize logger', () => {
-		vi.mock('../config', () => {
-			return {
-				config: {
-					logLevel: 'info',
-				},
-			}
-		})
-
 		initLogger({ name: 'test-name' })
 
 		expect(logger).toBeDefined()
@@ -27,14 +25,6 @@ describe('Logger', () => {
 	})
 
 	it('Should do nothing if initialized twice', () => {
-		vi.mock('../config', () => {
-			return {
-				config: {
-					logLevel: 'info',
-				},
-			}
-		})
-
 		initLogger({ name: 'test-name' })
 		initLogger({ name: 'test-name' })
 
