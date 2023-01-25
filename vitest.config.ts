@@ -5,6 +5,7 @@ export default defineConfig({
 		include: ['./src/**/*.test.ts', './test/**/*.test.ts'],
 		env: {
 			NODE_ENV: 'test',
+			LOG_LEVEL: 'error',
 		},
 		globals: true,
 		restoreMocks: true,

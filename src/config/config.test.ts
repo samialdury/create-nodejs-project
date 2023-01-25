@@ -12,16 +12,12 @@ describe('Config', () => {
 	})
 
 	it('Should initialize config', () => {
-		vi.stubEnv('LOG_LEVEL', 'trace')
-
 		initConfig()
 
 		expect(config).toBeDefined()
 	})
 
 	it('Should do nothing if initialized twice', () => {
-		vi.stubEnv('LOG_LEVEL', 'trace')
-
 		initConfig()
 		initConfig()
 
@@ -29,12 +25,23 @@ describe('Config', () => {
 	})
 
 	it('Should throw validation error', () => {
+		vi.stubEnv('LOG_LEVEL', '')
+		const mockErrorFn = vi.fn().mockReturnValue(() => null)
+
+		const mockConsole = {
+			error: mockErrorFn,
+		}
+
+		vi.stubGlobal('console', mockConsole)
+
 		try {
 			initConfig()
 
 			assert(false, 'Should throw error by now')
 		} catch (err) {
 			if (err instanceof ConfigError) {
+				expect(mockErrorFn).toHaveBeenCalledOnce()
+
 				expect(err.isOperational).toBe(false)
 				expect(err.issues.length).toBeGreaterThanOrEqual(1)
 				expect(err.issues[0]).toHaveProperty('received')
