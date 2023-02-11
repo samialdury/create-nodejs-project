@@ -7,6 +7,6 @@
 		"**/build": true,
 		"**/coverage": true,
 		"**/pnpm-lock.yaml": true,
-		"**/.eslintcache": true,
+		"**/.eslintcache": true
 	}
 }
