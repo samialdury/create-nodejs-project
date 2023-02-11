@@ -16,7 +16,7 @@ pnpm dlx tiged github:samialdury/create-nodejs-project my-project
 
 cd my-project
 git init
-pnpm install
+make install
 
 make help
 ```
