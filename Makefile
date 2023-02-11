@@ -2,9 +2,6 @@ include .env
 
 PROJECT_NAME	:= create-nodejs-project
 
-SRC_DIR				:= ./src
-TEST_DIR			:= ./test
-
 NPM_BIN				:= ./node_modules/.bin
 
 TSC						:= $(NPM_BIN)/tsc
@@ -64,19 +61,19 @@ coverage: ## run tests (with coverage)
 
 .PHONY: prettier
 prettier: ## run Prettier (autofix)
-	$(PRETTIER) --write $(SRC_DIR) $(TEST_DIR)
+	$(PRETTIER) --write .
 
 .PHONY: prettier-ci
 prettier-ci: ## run Prettier
-	$(PRETTIER) --check $(SRC_DIR) $(TEST_DIR)
+	$(PRETTIER) --check .
 
 .PHONY: eslint
 eslint: ## run ESLint (autofix)
-	$(ESLINT) --max-warnings 0 --cache --fix $(SRC_DIR) $(TEST_DIR)
+	$(ESLINT) --max-warnings 0 --cache --fix .
 
 .PHONY: eslint-ci
 eslint-ci: ## run ESLint
-	$(ESLINT) --max-warnings 0 $(SRC_DIR) $(TEST_DIR)
+	$(ESLINT) --max-warnings 0 .
 
 .PHONY: lint
 lint: prettier eslint ## run Prettier & ESlint (autofix)
