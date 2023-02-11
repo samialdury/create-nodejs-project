@@ -22,12 +22,6 @@
 		// Prettier
 		"plugin:prettier/recommended"
 	],
-	"ignorePatterns": [
-		"**/node_modules",
-		"**/build",
-		"**/commitlint.config.cjs",
-		"**/vitest.config.ts"
-	],
 	"rules": {
 		"import/order": [
 			"error",

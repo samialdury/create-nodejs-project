@@ -1,0 +1,5 @@
+node_modules
+build
+coverage
+commitlint.config.cjs
+vitest.config.ts
