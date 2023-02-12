@@ -61,7 +61,7 @@ coverage: ## run tests (with coverage)
 
 .PHONY: prettier
 prettier: ## run Prettier (autofix)
-	$(PRETTIER) --write .
+	$(PRETTIER) --cache --write .
 
 .PHONY: prettier-ci
 prettier-ci: ## run Prettier
