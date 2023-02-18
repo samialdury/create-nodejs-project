@@ -1,5 +1,3 @@
-include .env
-
 PROJECT_NAME	:= create-nodejs-project
 
 NPM_BIN				:= ./node_modules/.bin
