@@ -1,7 +1,7 @@
 import { initConfig } from './config'
 import { initLogger, logger } from './logger'
 
-export const main = (): void => {
+const main = (): void => {
 	initConfig()
 
 	initLogger({
