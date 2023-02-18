@@ -16,6 +16,7 @@ pnpm dlx tiged github:samialdury/create-nodejs-project my-project
 
 cd my-project
 git init
+cp .env.example .env
 make install
 
 make help
